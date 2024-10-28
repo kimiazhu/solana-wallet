@@ -19,4 +19,11 @@ func main() {
 	}
 
 	fmt.Println("version", response.SolanaCore)
+
+	balance, err := c.GetBalance(context.TODO(), "9qeP9DmjXAmKQc4wy133XZrQ3Fo4ejsYteA7X4YFJ3an")
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(balance)
 }
